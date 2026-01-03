@@ -18,6 +18,7 @@ export default function App() {
         </nav>
       </header>
 
+      {/* Routing */}
       <Routes>
         <Route path="/" element={<ProductListingPage />} />
         <Route path="/product/:id" element={<ProductDetailPage />} />
