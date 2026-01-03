@@ -1,0 +1,168 @@
+:root {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: #0f172a;
+  background: #f8fafc;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.nav {
+  display: flex;
+  gap: 12px;
+}
+.nav a {
+  padding: 8px 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  border: 1px solid #e2e8f0;
+  background: white;
+}
+.nav a.active {
+  border-color: #0ea5e9;
+}
+
+.filters {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr;
+  margin: 16px 0;
+}
+@media (min-width: 800px) {
+  .filters {
+    grid-template-columns: 1.5fr 1fr 1fr;
+  }
+}
+
+.field label {
+  display: block;
+  font-size: 12px;
+  color: #475569;
+  margin-bottom: 6px;
+}
+input,
+select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid #cbd5e1;
+  background: white;
+}
+
+.grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+@media (min-width: 560px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 960px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 12px;
+  display: grid;
+  gap: 10px;
+}
+.cardLink {
+  text-decoration: none;
+  color: inherit;
+}
+.thumb {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  background: #f1f5f9;
+  border-radius: 12px;
+}
+.title {
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.3;
+  height: 38px;
+  overflow: hidden;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+.price {
+  font-weight: 800;
+}
+.pill {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #e2e8f0;
+  white-space: nowrap;
+}
+
+.btn {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: none;
+  background: #0ea5e9;
+  color: white;
+  cursor: pointer;
+}
+.btn.danger {
+  background: #ef4444;
+}
+
+.muted {
+  color: #475569;
+}
+
+.detail {
+  display: grid;
+  gap: 12px;
+}
+.detailBody {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+  align-items: start;
+}
+@media (min-width: 860px) {
+  .detailBody {
+    grid-template-columns: 380px 1fr;
+  }
+}
+.detailImg {
+  width: 100%;
+  height: 320px;
+  object-fit: contain;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 10px;
+}
